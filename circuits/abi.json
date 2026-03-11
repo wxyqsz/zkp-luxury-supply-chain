@@ -1,0 +1,49 @@
+{
+  "inputs": [
+    {
+      "name": "material_data",
+      "public": false,
+      "type": "array",
+      "components": {
+        "size": 8,
+        "type": "u32"
+      }
+    },
+    {
+      "name": "manufacturing_data",
+      "public": false,
+      "type": "array",
+      "components": {
+        "size": 8,
+        "type": "u32"
+      }
+    },
+    {
+      "name": "sustainability_data",
+      "public": false,
+      "type": "array",
+      "components": {
+        "size": 8,
+        "type": "u32"
+      }
+    },
+    {
+      "name": "material_verified",
+      "public": false,
+      "type": "bool"
+    },
+    {
+      "name": "manufacturing_verified",
+      "public": false,
+      "type": "bool"
+    },
+    {
+      "name": "sustainability_verified",
+      "public": false,
+      "type": "bool"
+    }
+  ],
+  "output": {
+    "type": "bool"
+  }
+}

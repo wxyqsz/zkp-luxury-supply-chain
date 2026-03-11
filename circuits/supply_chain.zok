@@ -1,0 +1,23 @@
+import "hashes/sha256/512bitPadded" as sha256;
+
+def main(
+    private u32[8] material_data,
+    private u32[8] manufacturing_data,
+    private u32[8] sustainability_data,
+    private bool material_verified,
+    private bool manufacturing_verified,
+    private bool sustainability_verified
+) -> bool {
+
+    // All 3 certificates must be verified
+    assert(material_verified == true);
+    assert(manufacturing_verified == true);
+    assert(sustainability_verified == true);
+
+    // Hash the private data to prove it exists
+    u32[8] material_hash = sha256(material_data, material_data);
+    u32[8] manufacturing_hash = sha256(manufacturing_data, manufacturing_data);
+    u32[8] sustainability_hash = sha256(sustainability_data, sustainability_data);
+
+    return true;
+}

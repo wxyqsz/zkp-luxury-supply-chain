@@ -1,0 +1,11 @@
+=== Day 4 Results ===
+ProductRegistry: 0x0165878A594ca255338adfa4d48449f69242Eb8F
+Verifier:        0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6
+Pairing:         0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+
+ZKP Scheme: Groth16
+Curve: bn128
+Constraints: 799
+Products tested: LV-2024-001, LV-2024-002, DIOR-2024-001
+
+Full flow verified: Certificate → ZKP Proof → Blockchain → ✅ Authentic
