@@ -1,9 +1,13 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
-app.use(cors());
+const path = require('path');
+const app = express();
 
+app.use(cors());
 app.use(express.json());
+
+// Serve QR code images
+app.use('/qr', express.static(path.join(__dirname, '../qrcodes')));
 
 const registerRoute = require('./routes/register');
 const certifyRoute = require('./routes/certify');

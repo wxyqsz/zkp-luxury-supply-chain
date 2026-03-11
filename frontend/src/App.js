@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { QRCodeSVG } from 'qrcode.react';
 import './App.css';
 
 function App() {
@@ -8,13 +9,24 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const verifyProduct = async () => {
-    if (!productId.trim()) return;
+  // Auto-verify if URL has ?id= parameter
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) {
+      setProductId(id);
+      verifyProduct(id);
+    }
+  }, []);
+
+  const verifyProduct = async (id) => {
+    const pid = id || productId;
+    if (!pid.trim()) return;
     setLoading(true);
     setError(null);
     setResult(null);
     try {
-      const res = await axios.get(`http://localhost:3000/verify/${productId}`);
+      const res = await axios.get(`http://localhost:3000/verify/${pid}`);
       setResult(res.data);
     } catch (err) {
       setError('Product not found or network error.');
@@ -39,7 +51,7 @@ function App() {
             onChange={e => setProductId(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && verifyProduct()}
           />
-          <button className="btn" onClick={verifyProduct} disabled={loading}>
+          <button className="btn" onClick={() => verifyProduct()} disabled={loading}>
             {loading ? 'VERIFYING...' : 'VERIFY'}
           </button>
         </div>
@@ -73,6 +85,18 @@ function App() {
                 </span>
               </div>
             </div>
+
+            {result.zkp_verified && (
+              <div className="qr-section">
+                <div className="qr-label">SCAN TO VERIFY</div>
+                <QRCodeSVG
+                  value={`http://localhost:3001/verify?id=${result.product_id}`}
+                  size={160}
+                  bgColor="#111118"
+                  fgColor="#c9a84c"
+                />
+              </div>
+            )}
           </div>
         )}
       </div>
