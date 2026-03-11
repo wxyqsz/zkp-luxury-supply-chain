@@ -1,0 +1,99 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0a0a0f;
+  color: #f0f0f0;
+  font-family: 'Georgia', serif;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #c9a84c;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2.4rem;
+  letter-spacing: 0.3em;
+  color: #c9a84c;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.card {
+  background: #111118;
+  border: 1px solid #2a2a3a;
+  padding: 40px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.card-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: #c9a84c;
+  margin-bottom: 24px;
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.input {
+  flex: 1;
+  background: #0a0a0f;
+  border: 1px solid #2a2a3a;
+  color: #f0f0f0;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  font-family: 'Georgia', serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus { border-color: #c9a84c; }
+
+.btn {
+  background: #c9a84c;
+  color: #0a0a0f;
+  border: none;
+  padding: 14px 28px;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn:hover { background: #e0c060; }
+.btn:disabled { background: #555; cursor: not-allowed; }
+
+.error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  padding: 12px;
+  border: 1px solid #e74c3c;
+  margin-bottom: 16px;
+}
