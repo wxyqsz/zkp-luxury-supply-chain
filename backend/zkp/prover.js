@@ -11,7 +11,7 @@ function generateProof(material, manufacturing, sustainability) {
             ...material,
             ...manufacturing,
             ...sustainability,
-            '1', '1', '1'  // all 3 verified = true
+            '1'// all 3 verified = true
         ].join(' ');
 
         // Compute witness

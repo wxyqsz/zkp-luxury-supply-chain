@@ -5,7 +5,7 @@ const QRCode = require('qrcode');
 const path = require('path');
 const fs = require('fs');
 
-const contractAddress = '0x0165878A594ca255338adfa4d48449f69242Eb8F';
+const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 const abi = require('../../artifacts/contracts/ProductRegistry.sol/ProductRegistry.json').abi;
 
 const provider = new ethers.JsonRpcProvider('http://127.0.0.1:8545');

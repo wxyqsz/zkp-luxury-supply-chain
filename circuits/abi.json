@@ -28,19 +28,9 @@
       }
     },
     {
-      "name": "material_verified",
-      "public": false,
-      "type": "bool"
-    },
-    {
-      "name": "manufacturing_verified",
-      "public": false,
-      "type": "bool"
-    },
-    {
-      "name": "sustainability_verified",
-      "public": false,
-      "type": "bool"
+      "name": "product_id",
+      "public": true,
+      "type": "field"
     }
   ],
   "output": {
