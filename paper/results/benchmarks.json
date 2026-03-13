@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-11T09:50:16.684Z",
+  "timestamp": "2026-03-13T11:21:29.220Z",
   "system": "Dell Inspiron i7 11th Gen 16GB RAM WSL2 Ubuntu",
   "zkp_scheme": "Groth16",
   "curve": "BN128",
@@ -7,27 +7,27 @@
   "results": [
     {
       "product_count": 10,
-      "avg_proof_time_ms": 317,
-      "verify_latency_ms": 21,
-      "proofs_per_minute": 189
+      "avg_proof_time_ms": 1065,
+      "verify_latency_ms": 48,
+      "proofs_per_minute": 56
     },
     {
       "product_count": 50,
-      "avg_proof_time_ms": 96,
-      "verify_latency_ms": 16,
-      "proofs_per_minute": 627
+      "avg_proof_time_ms": 263,
+      "verify_latency_ms": 19,
+      "proofs_per_minute": 228
     },
     {
       "product_count": 100,
-      "avg_proof_time_ms": 114,
-      "verify_latency_ms": 15,
-      "proofs_per_minute": 525
+      "avg_proof_time_ms": 228,
+      "verify_latency_ms": 16,
+      "proofs_per_minute": 264
     },
     {
       "product_count": 500,
-      "avg_proof_time_ms": 102,
+      "avg_proof_time_ms": 270,
       "verify_latency_ms": 16,
-      "proofs_per_minute": 588
+      "proofs_per_minute": 222
     }
   ]
 }

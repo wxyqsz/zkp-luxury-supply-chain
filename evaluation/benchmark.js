@@ -16,7 +16,7 @@ async function registerProduct(productId) {
 }
 
 function measureProofTime() {
-    const inputs = '1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 1 1';
+    const inputs = '75 1 65 0 0 0 0 0 80 1 2 0 0 0 0 0 30 70 1 0 0 0 0 0 1';
     const start = Date.now();
     execSync(`zokrates compute-witness -a ${inputs}`, { cwd: circuitsDir });
     execSync(`zokrates generate-proof`, { cwd: circuitsDir });
@@ -63,7 +63,7 @@ async function runBenchmark(count) {
 
 async function main() {
     console.log('=== ZKP LUXURY SUPPLY CHAIN BENCHMARKS ===');
-    console.log('Circuit: Groth16 | Curve: BN128 | Constraints: 799');
+    console.log('Circuit: Groth16 | Curve: BN128 | Constraints: 6937');
 
     for (const count of [10, 50, 100, 500]) {
         await runBenchmark(count);
