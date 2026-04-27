@@ -1,8 +1,26 @@
-# Sample Hardhat Project
+Title: Privacy-Preserving Luxury Supply Chain Verification using Zero-Knowledge Proofs
+           
+A blockchain + ZKP system that verifies product authenticity and ESG compliance without exposing sensitive supply chain data.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+* Verifies authenticity across 5 actors (supplier → consumer)
+* Preserves confidentiality using zk-SNARKs (Groth16)
+* Enables QR-based consumer verification
 
-Try running some of the following tasks:
+Tech stack
+ZoKrates | Ethereum | Solidity | Node.js | React | Hardhat
+
+Results 
+- Proof generation: ~228–270 ms
+- Verification latency: ~16–19 ms
+- Throughput: up to 264 proofs/min
+  
+6. Architecture 
+/circuits – ZKP logic
+/contracts – smart contracts
+/backend – API
+/frontend – verification UI
+
+
 
 ```shell
 npx hardhat help
