@@ -13,8 +13,8 @@ Results
 - Proof generation: ~228–270 ms
 - Verification latency: ~16–19 ms
 - Throughput: up to 264 proofs/min
-  
-6. Architecture 
+
+Architecture 
 /circuits – ZKP logic
 /contracts – smart contracts
 /backend – API
