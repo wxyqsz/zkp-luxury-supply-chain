@@ -20,6 +20,8 @@ Architecture
 /backend – API
 /frontend – verification UI
 
+Full research paper: https://github.com/wxyqsz/zkp-luxury-supply-chain/blob/main/paper/results/Chengdu.pdf
+
 
 
 ```shell
